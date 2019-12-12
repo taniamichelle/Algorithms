@@ -3,7 +3,11 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+  curr_min_price_so_far = 
+  max_profit_so_far = sorted(prices)[-1] # search 'prices' array for highest price
+  prev_price =  # left side
+  next_price =   # right side
+  for i in prices:
 
 
 if __name__ == '__main__':
