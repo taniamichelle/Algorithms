@@ -3,12 +3,24 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
-
-
+  max_batch = float('inf')
+  for ingredient in recipe:
+    if ingredients.get(ingredient) is None:
+      return 0
+    
+    result = ingredients[ingredient]//recipe[ingredient]
+    
+    if max_batch > result:
+      max_batch = result
+      
+  return max_batch
+    
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
   # your implementation with different inputs
   recipe = { 'milk': 100, 'butter': 50, 'flour': 5 }
   ingredients = { 'milk': 132, 'butter': 48, 'flour': 51 }
   print("{batches} batches can be made from the available ingredients: {ingredients}.".format(batches=recipe_batches(recipe, ingredients), ingredients=ingredients))
+  
+  
+
